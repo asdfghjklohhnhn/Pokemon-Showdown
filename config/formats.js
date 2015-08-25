@@ -13,7 +13,6 @@ exports.Formats = [
 		ruleset: ['Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod']
 		
 	},
-	}
 	{
 		name: "Random Battle",
 		section: "ORAS Singles",
