@@ -1,10 +1,15 @@
 exports.BattleScripts = {
     init: function () {
         for (var i in this.data.Pokedex) {
-            if (Object.values(this.data.Pokedex[i].evs).sum() <= 2040) {
-            
+            if (Object.values(this.data.Pokedex[i].evs).sum() <= 510) {
+             this.modData('Pokedex', i).evs['hp'] = this.data.Pokedex[i].evs['hp'] * 4;
+                this.modData('Pokedex', i).evs['atk'] = this.data.Pokedex[i].evs['atk'] * 4;
+                this.modData('Pokedex', i).evs['def'] = this.data.Pokedex[i].evs['def'] * 4;
+                this.modData('Pokedex', i).evs['spa'] = this.data.Pokedex[i].evs['spa'] * 4;
+                this.modData('Pokedex', i).evs['spd'] = this.data.Pokedex[i].evs['spd'] * 4;
+                this.modData('Pokedex', i).evs['spe'] = this.data.Pokedex[i].evs['spe'] * 4;
+            }
             }
         }
     }
 };
-"evs":{"hp":1000,"atk":1000,"def":1000,"spa":1000,"spd":1000,"spe":1000}
