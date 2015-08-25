@@ -1,1 +1,10 @@
+exports.BattleScripts = {
+    init: function () {
+        for (var i in this.data.Pokedex) {
+            if (Object.values(this.data.Pokedex[i].evs).sum() <= 2040) {
+            
+            }
+        }
+    }
+};
 "evs":{"hp":1000,"atk":1000,"def":1000,"spa":1000,"spd":1000,"spe":1000}
