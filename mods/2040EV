@@ -2,7 +2,7 @@ exports.BattleScripts = {
     init: function () {
         for (var i in this.data.Pokedex) {
             if (Object.values(this.data.Pokedex[i].evs).sum() <= 510) {
-             this.modData('Pokedex', i).evs['hp'] = this.data.Pokedex[i].evs['hp'] * 4;
+                this.modData('Pokedex', i).evs['hp'] = this.data.Pokedex[i].evs['hp'] * 4;
                 this.modData('Pokedex', i).evs['atk'] = this.data.Pokedex[i].evs['atk'] * 4;
                 this.modData('Pokedex', i).evs['def'] = this.data.Pokedex[i].evs['def'] * 4;
                 this.modData('Pokedex', i).evs['spa'] = this.data.Pokedex[i].evs['spa'] * 4;
