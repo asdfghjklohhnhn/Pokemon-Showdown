@@ -5,7 +5,15 @@ exports.Formats = [
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
-
+	{
+		name: "2040EVohhnhn"
+		section: "asdfghjklohhnhn"
+		
+		mod: '2040EV'
+		ruleset: ['Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod']
+		
+	},
+	}
 	{
 		name: "Random Battle",
 		section: "ORAS Singles",
