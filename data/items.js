@@ -2184,7 +2184,7 @@ exports.BattleItems = {
 					if (move.secondaries[i].volatileStatus === 'flinch') return;
 				}
 				move.secondaries.push({
-					chance: 10,
+					chance: 90,
 					volatileStatus: 'flinch'
 				});
 			}
@@ -2284,7 +2284,7 @@ exports.BattleItems = {
 		onResidualOrder: 5,
 		onResidualSubOrder: 2,
 		onResidual: function (pokemon) {
-			this.heal(pokemon.maxhp / 16);
+			this.heal(pokemon.maxhp / 6);
 		},
 		num: 234,
 		gen: 2,
@@ -2366,11 +2366,11 @@ exports.BattleItems = {
 			basePower: 30
 		},
 		onModifyDamage: function (damage, source, target, move) {
-			return this.chainModify(1.3);
+			return this.chainModify(3.0);
 		},
 		onAfterMoveSecondarySelf: function (source, target, move) {
 			if (source && source !== target && move && move.category !== 'Status' && !move.ohko) {
-				this.damage(source.maxhp / 10, source, source, this.getItem('lifeorb'));
+				this.damage(source.maxhp / 30, source, source, this.getItem('lifeorb'));
 			}
 		},
 		num: 270,
@@ -4070,7 +4070,7 @@ exports.BattleItems = {
 			type: "Psychic"
 		},
 		onUpdate: function (pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 2) {
+			if (pokemon.hp <= pokemon.maxhp / 1.5) {
 				pokemon.eatItem();
 			}
 		},
@@ -4078,7 +4078,7 @@ exports.BattleItems = {
 			if (!this.runEvent('TryHeal', pokemon)) return false;
 		},
 		onEat: function (pokemon) {
-			this.heal(pokemon.maxhp / 4);
+			this.heal(pokemon.maxh);
 		},
 		num: 158,
 		gen: 3,
